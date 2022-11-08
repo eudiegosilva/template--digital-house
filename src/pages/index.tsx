@@ -82,6 +82,6 @@ export const getStaticProps: GetStaticProps = async () => {
       repositories: respositoryNames,
       date: new Date().toISOString(),
     },
-    revalidate: 5,
+    revalidate: 60 * 60 * 2,
   };
 };
