@@ -1,47 +1,49 @@
 const families = {
-  'font-family-heading': 'Epilogue, sans-serif',
-  'font-family-body': 'Epilogue, sans-serif',
-  'font-family-code': 'Fira Code, monospace',
+  heading: 'Epilogue, sans-serif',
+  body: 'Epilogue, sans-serif',
+  code: 'Epilogue, sans-serif',
 };
 
-// major third, base 16px
 const sizes = {
-  'font-size-01': '0.64rem', // 10.24px
-  'font-size-02': '0.8rem', // 12.80px
-  'font-size-03': '1rem', // 16.00px
-  'font-size-04': '1.25rem', // 20.00px
-  'font-size-05': '1.563rem', // 25.00px
-  'font-size-06': '1.953rem', // 31.25px
-  'font-size-07': '2.441rem', // 39.06px
-  'font-size-08': '3.052rem', // 48.83px
-  'font-size-09': '3.815rem', // 61.04px
+  ss: '0.625rem', // 10px
+  xs: '0.75rem', // 12px
+  sm: '0.875rem', // 14px
+  md: '1rem', // 16px
+  lg: '1.25rem', // 20px
+  xl: '1.5rem', // 24px
+  xx: '2rem', // 32px
+  '3x': '2.5rem', // 40px
+  '4x': '3rem', // 48px
+  '5x': '4rem', // 64px
+  '6x': '5rem', // 80px
+  '7x': '6rem', // 96px
 };
 
 const weights = {
-  'font-weight-100': 100,
-  'font-weight-200': 200,
-  'font-weight-300': 300,
-  'font-weight-400': 400,
-  'font-weight-500': 500,
-  'font-weight-600': 600,
-  'font-weight-700': 700,
-  'font-weight-800': 800,
-  'font-weight-900': 900,
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+  900: 900,
 };
 
 const letterSpacings = {
-  'font-letter-spacing-heading': '-0.01rem',
-  'font-letter-spacing-body': '0.1rem',
+  heading: '-0.01rem',
+  body: '0.05rem',
 };
 
 const lineHeights = {
-  'font-line-height-100': '100%',
-  'font-line-height-115': '115%',
-  'font-line-height-120': '120%',
-  'font-line-height-133': '133%',
-  'font-line-height-150': '150%',
-  'font-line-height-170': '170%',
-  'font-line-height-200': '200%',
+  100: '100%',
+  115: '115%',
+  120: '120%',
+  133: '133%',
+  150: '150%',
+  170: '170%',
+  200: '200%',
 };
 
 export const fonts = { families, sizes, weights, letterSpacings, lineHeights };

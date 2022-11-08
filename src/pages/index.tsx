@@ -1,5 +1,5 @@
-import { SignInLayout } from 'layouts';
+import { HomeLayout } from 'layouts';
 
 export default function Home() {
-  return <SignInLayout />;
+  return <HomeLayout />;
 }

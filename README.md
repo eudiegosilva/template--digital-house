@@ -1,4 +1,4 @@
-# Template NextTS — TypeScript, Stitches, Radix and Design Tokens
+# Template NextTS — TypeScript, Styled Components, Radix and Design Tokens
 
 <img src="./public/assets/images/template-cover.png" />
 
@@ -10,7 +10,7 @@
     - [Other scripts available](#other-scripts-available)
   - [Main technologies used](#main-technologies-used)
     - [radix](#radix)
-    - [stitches](#stitches)
+    - [styled components](#styled components)
     - [storybook](#storybook)
     - [typescript](#typescript)
   - [About me](#about-me)
@@ -18,7 +18,7 @@
 
 ## About this template
 
-This project is a template for NextJS with TypeScript projects. This template was built with `create-next-app`, `typescript`, `stitches`, `@radix-ui` and `storybook`.
+This project is a template for NextJS with TypeScript projects. This template was built with `create-next-app`, `typescript`, `styled components`, `@radix-ui` and `storybook`.
 
 ---
 
@@ -73,7 +73,7 @@ _Learn how to install `yarn` through the [official documentation](https://yarnpk
 
 - [x] NextJS
 - [x] TypeScript
-- [x] Stitches
+- [x] styled components
 - [x] Radix UI Colors
 - [x] Storybook
 - [x] ESLint
@@ -88,7 +88,7 @@ _Learn how to install `yarn` through the [official documentation](https://yarnpk
 ### [radix colors](https://www.radix-ui.com/colors)
 > An open-source color system for designing beautiful, accessible websites and apps.
 
-### [stitches](https://stitches.dev/)
+### [styled components](https://styled components.dev/)
 > CSS-in-JS with near-zero runtime, SSR, multi-variant support, and a best-in-class developer experience.
 
 ### [storybook](https://storybook.js.org/)
