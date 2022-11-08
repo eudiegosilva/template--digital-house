@@ -38,6 +38,7 @@
         "groups": [
           ["/^react/", "/^next/"],
           ["/^next-themes/", "/^next-seo/"],
+          "/^styled/",
           "module",
           ["/^styles/", "/./*.styles/"],
           ["parent", "sibling", "index"]
