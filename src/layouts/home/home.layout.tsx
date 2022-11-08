@@ -1,17 +1,27 @@
+import { useState, useEffect } from 'react'; // CLIENT SIDE RENDERING
+
 import * as s from './home.layout.styles';
 
 const HomeLayout = () => {
+  // CLIENT SIDE RENDERING
+  const [repositories, setRepositories] = useState<string[]>([]);
+  useEffect(() => {
+    fetch('https://api.github.com/users/diegosilvatech/repos')
+      .then((response) => response.json())
+      .then((data) => {
+        const respositoryNames = data.map((repository) => repository.name);
+
+        setRepositories(respositoryNames);
+      });
+  }, []);
+
   return (
     <s.Container>
-      <s.Section>
-        <s.Title>
-          Awesome Template <s.Strong>NextJS</s.Strong> for{' '}
-          <s.Strong>Digital House</s.Strong> students.
-        </s.Title>
-        <s.Description>
-          Made with NextJS, TypeScript, Styled Components and Design Tokens.
-        </s.Description>
-      </s.Section>
+      <ul>
+        {repositories.map((repository) => (
+          <li key={repository}>{repository}</li>
+        ))}
+      </ul>
     </s.Container>
   );
 };
