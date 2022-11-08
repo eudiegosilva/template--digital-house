@@ -13,6 +13,10 @@ const story: Meta<ButtonProps> = {
       description: 'Button label',
       table: { defaultValue: { summary: '' } },
     },
+    onClick: {
+      description: 'Event executed when the component is clicked',
+      action: 'button-clicked',
+    },
   },
   parameters: {},
 };
