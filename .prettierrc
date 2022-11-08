@@ -3,5 +3,5 @@
   "endOfLine": "auto",
   "semi": true,
   "singleQuote": true,
-  "trailingComma": "es5"
+  "trailingComma": "all"
 }

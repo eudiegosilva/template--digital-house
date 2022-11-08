@@ -1,23 +1,68 @@
+// // CLIENT SIDE RENDERING
+// import { useState, useEffect } from 'react';
+
+// export default function Home() {
+//   const [repositories, setRepositories] = useState<string[]>([]);
+//   useEffect(() => {
+//     fetch('https://api.github.com/users/diegosilvatech/repos')
+//       .then((response) => response.json())
+//       .then((data) => {
+//         const respositoryNames = data.map((repository) => repository.name);
+
+//         setRepositories(respositoryNames);
+//       });
+//   }, []);
+
+//   return (
+//     <div>
+//       <ul>
+//         {repositories.map((repository) => (
+//           <li key={repository}>{repository}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// // SERVER SIDE RENDERING
 // import { GetServerSideProps } from 'next';
 
-import { useState, useEffect } from 'react';
+// export default function Home({ repositories }) {
+//   return (
+//     <div>
+//       <ul>
+//         {repositories.map((repository) => (
+//           <li key={repository}>{repository}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
 
-export default function Home() {
-  const [repositories, setRepositories] = useState<string[]>([]);
-  useEffect(() => {
-    fetch('https://api.github.com/users/diegosilvatech/repos')
-      .then((response) => response.json())
-      .then((data) => {
-        const respositoryNames = data.map((repository) => repository.name);
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const response = await fetch(
+//     'https://api.github.com/users/diegosilvatech/repos'
+//   );
 
-        setRepositories(respositoryNames);
-      });
-  }, []);
+//   const data = await response.json();
+//   const respositoryNames = data.map((repository) => repository.name);
 
+//   return {
+//     props: {
+//       repositories: respositoryNames,
+//     },
+//   };
+// };
+
+// // STATIC SITE GENERATION
+import { GetStaticProps } from 'next';
+
+export default function Home({ repositories, date }: any) {
   return (
     <div>
+      <h2>{date}</h2>
       <ul>
-        {repositories.map((repository) => (
+        {repositories.map((repository: any) => (
           <li key={repository}>{repository}</li>
         ))}
       </ul>
@@ -25,4 +70,18 @@ export default function Home() {
   );
 }
 
-// export const getServerSideProps: GetServerSideProps = async () => {};
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await fetch(
+    'https://api.github.com/users/diegosilvatech/repos',
+  );
+  const data = await response.json();
+  const respositoryNames = data.map((repository: any) => repository.name);
+
+  return {
+    props: {
+      repositories: respositoryNames,
+      date: new Date().toISOString(),
+    },
+    revalidate: 5,
+  };
+};
